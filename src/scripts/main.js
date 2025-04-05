@@ -24,7 +24,7 @@ headers.forEach((header, index) => {
     });
 
     sortedRows.sort((a, b) => {
-      if (!isNaN(a.value)) {
+      if (!isNaN(Number(a.value)) && !isNaN(Number(b.value))) {
         return Number(a.value) - Number(b.value);
       } else {
         return a.value.localeCompare(b.value);
